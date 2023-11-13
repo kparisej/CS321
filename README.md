@@ -11,8 +11,8 @@ The Green Card Replacement Form is a JavaFX application designed to simplifiy th
 - Easy submission process to securely send the application to receive validation.
 
 ## Folder Structure
-- 'src/': contains the source code of the project.
-- 'target/': contains the compiled or built files produced from the souce code.
+- `src/`: contains the source code of the project.
+- `target/`: contains the compiled or built files produced from the souce code.
 
 ## Getting Started
 1. **Instructions on how to clone the project from the repository.**
