@@ -7,8 +7,8 @@ This directory contains the source code and test files for the Green Card Replac
 - [Test Directory](#test-directory)
 
 ## Directory Structure
-- 'main/': Contains the main source code for the Green Card Replacement Form application.
-- 'test/': Stores the test files used to verify the functionality of the application.
+- `main/`: Contains the main source code for the Green Card Replacement Form application.
+- `test/`: Stores the test files used to verify the functionality of the application.
 
 ## Main Structure
 The `main` directory includes the main source code of the Green Card Replacement Form application. Here, you'll find  the Java source files, resources, and assets necessary for building and running the application.
