@@ -13,6 +13,7 @@ public class BO {
     private HomeAddress homeAddress;
     private String reasonForReplacement;
     private ArrayList<BO> boList = new ArrayList<>();
+    int f = 0;
 
     public BO(int id, String firstName, String middleName, String lastName, LocalDate dateOfBirth,
             String countryOfBirth, HomeAddress homeAddress, String reasonForReplacement) {

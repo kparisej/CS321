@@ -2,7 +2,6 @@ package org.openjfx;
 
 import java.time.LocalDate;
 
-
 public class GreenCardReplacementBO {
     private int id;
     private String firstName;
@@ -12,74 +11,93 @@ public class GreenCardReplacementBO {
     private String countryOfBirth;
     private HomeAddress homeAddress;
     private String reasonForReplacement;
+    int change;
 
-    public GreenCardReplacementBO(int id, String firstName, String middleName, String lastName, LocalDate dateOfBirth, String countryOfBirth, HomeAddress homeAddress, String reasonForReplacement) {
+    public GreenCardReplacementBO(int id, String firstName, String middleName, String lastName, LocalDate dateOfBirth,
+            String countryOfBirth, HomeAddress homeAddress, String reasonForReplacement) {
 
     }
 
     /**
      * Getter & Setter methods
      */
-    public void setId(int id){
+    public void setId(int id) {
     }
-    public int getId(){
+
+    public int getId() {
         return -1;
     }
-    public void setFirstName(String firstName){
+
+    public void setFirstName(String firstName) {
     }
-    public String getFirstName(){
+
+    public String getFirstName() {
         return null;
     }
-    public void setMiddleName(String middleName){
+
+    public void setMiddleName(String middleName) {
     }
-    public String getMiddleName(){
+
+    public String getMiddleName() {
         return null;
     }
-    public void setLastName(String lastName){
+
+    public void setLastName(String lastName) {
 
     }
-    public String getLastName(){
+
+    public String getLastName() {
         return null;
     }
-    public void setDateOfBirth(LocalDate dateOfBirth){
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
 
     }
-    public LocalDate getDateOfBirth(){
+
+    public LocalDate getDateOfBirth() {
         return null;
     }
-    public void setCountryOfBirth(String countryOfBirth){
+
+    public void setCountryOfBirth(String countryOfBirth) {
     }
-    public String getCountryOfBirth(){
+
+    public String getCountryOfBirth() {
         return null;
     }
-    public void setHomeAddress(HomeAddress homeAddress){
+
+    public void setHomeAddress(HomeAddress homeAddress) {
 
     }
-    public String getHomeAddress(){
+
+    public String getHomeAddress() {
         return null;
     }
-    public void setReasonForReplacement(String reasonForReplacement){
+
+    public void setReasonForReplacement(String reasonForReplacement) {
 
     }
-    public String getReasonForReplacement(){
+
+    public String getReasonForReplacement() {
         return null;
     }
 
     /**
      * Validates country of birth exists
+     * 
      * @param countryOfBirth
      * @return bool
      */
-    public Boolean isValidCountry(String countryOfBirth){
+    public Boolean isValidCountry(String countryOfBirth) {
         return false;
     }
 
     /**
      * Retrieves form with matching form id.
+     * 
      * @param formId
      * @return GreenReplacementCardBO
      */
-    public GreenCardReplacementBO getForm(int formId){
+    public GreenCardReplacementBO getForm(int formId) {
         return null;
     }
 }
