@@ -1,6 +1,7 @@
 package org.openjfx;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class GreenCardReplacementBO {
     private int id;
@@ -14,16 +15,26 @@ public class GreenCardReplacementBO {
     private String reasonForReplacement;
 
     // Constructor
-    public GreenCardReplacementBO(int id, String firstName, String middleName, String lastName, LocalDate dateOfBirth,
+    public GreenCardReplacementBO(int id, String firstName, String middleName, String lastName, String dateOfBirth,
             String countryOfBirth, HomeAddress homeAddress, String reasonForReplacement) {
         this.id = id;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
         this.countryOfBirth = countryOfBirth;
         this.homeAddress = homeAddress;
         this.reasonForReplacement = reasonForReplacement;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        try {
+            // Parse the date string into a LocalDate object using the formatter
+            this.dateOfBirth = LocalDate.parse(dateOfBirth, formatter);
+
+            // Now 'dateOfBirth' contains the parsed date as a LocalDate object
+            System.out.println("Parsed Date: " + dateOfBirth);
+        } catch (Exception e) {
+            // Handle parsing errors here, if necessary
+            e.printStackTrace();
+        }
     }
 
     // Getters and Setters

@@ -36,10 +36,10 @@ public class WorkFlow {
     }
 
     public static void main(String[] args) {
-        WorkFlowReader w = new WorkFlowReader();
         File file = new File("C:/Users/Dell/Documents/GitHub/CS321/src/main/java/org/openjfx/info.json");
-        w.getFile(file);
-        System.out.println(w.getId("Done"));
-        w.editStep(file, w.getId("Done"), "Done");
+        WorkFlowReader w = new WorkFlowReader(file);
+        w.editStep(w.getId("Approve"), "Done");
+        w.addPost(6, "Review");
+
     }
 }

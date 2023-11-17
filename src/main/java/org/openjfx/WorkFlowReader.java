@@ -13,8 +13,34 @@ import java.util.List;
 public class WorkFlowReader {
     static List<WorkFlow> workflows;
     static ObjectMapper mapper = new ObjectMapper();
+    private static File f;
 
-    public static void editStep(File f, int id, String step) {
+    public static void addPost(int id, String step) {
+        // Create a new WorkFlow object with the provided ID and step
+        WorkFlow newWorkFlow = new WorkFlow(id, step);
+
+        // Add the new WorkFlow to the existing list
+        workflows.add(newWorkFlow);
+
+        // Serialize the updated list back into JSON
+        String updatedJson;
+        try {
+            updatedJson = mapper.writeValueAsString(workflows);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return; // Return without writing to the file if there's an error
+        }
+
+        // Write the updated JSON back to the file
+        try (FileOutputStream fos = new FileOutputStream(f)) {
+            fos.write(updatedJson.getBytes());
+            fos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void editStep(int id, String step) {
         // Find the WorkFlow with id 2 and update its step to "Done"
         for (WorkFlow wf : workflows) {
             if (wf.getId() == id) {
@@ -54,8 +80,9 @@ public class WorkFlowReader {
         return 0;
     }
 
-    public void getFile(File f) {
+    public WorkFlowReader(File file) {
         try {
+            this.f = file;
             // Assuming 'workflows.json' is in the root of your project folder
             workflows = mapper.readValue(
                     f,
