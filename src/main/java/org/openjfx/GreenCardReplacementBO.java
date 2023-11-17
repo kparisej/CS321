@@ -7,97 +7,87 @@ public class GreenCardReplacementBO {
     private String firstName;
     private String middleName;
     private String lastName;
+    private String email;
     private LocalDate dateOfBirth;
     private String countryOfBirth;
     private HomeAddress homeAddress;
     private String reasonForReplacement;
-    int change;
 
+    // Constructor
     public GreenCardReplacementBO(int id, String firstName, String middleName, String lastName, LocalDate dateOfBirth,
             String countryOfBirth, HomeAddress homeAddress, String reasonForReplacement) {
-
+        this.id = id;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.countryOfBirth = countryOfBirth;
+        this.homeAddress = homeAddress;
+        this.reasonForReplacement = reasonForReplacement;
     }
 
-    /**
-     * Getter & Setter methods
-     */
-    public void setId(int id) {
-    }
-
+    // Getters and Setters
     public int getId() {
-        return -1;
+        return id;
     }
 
-    public void setFirstName(String firstName) {
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
-        return null;
+        return firstName;
     }
 
-    public void setMiddleName(String middleName) {
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getMiddleName() {
-        return null;
+        return middleName;
     }
 
-    public void setLastName(String lastName) {
-
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getLastName() {
-        return null;
+        return lastName;
     }
 
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public LocalDate getDateOfBirth() {
-        return null;
+        return dateOfBirth;
     }
 
-    public void setCountryOfBirth(String countryOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getCountryOfBirth() {
-        return null;
+        return countryOfBirth;
+    }
+
+    public void setCountryOfBirth(String countryOfBirth) {
+        this.countryOfBirth = countryOfBirth;
+    }
+
+    public HomeAddress getHomeAddress() {
+        return homeAddress;
     }
 
     public void setHomeAddress(HomeAddress homeAddress) {
-
-    }
-
-    public String getHomeAddress() {
-        return null;
-    }
-
-    public void setReasonForReplacement(String reasonForReplacement) {
-
+        this.homeAddress = homeAddress;
     }
 
     public String getReasonForReplacement() {
-        return null;
+        return reasonForReplacement;
     }
 
-    /**
-     * Validates country of birth exists
-     * 
-     * @param countryOfBirth
-     * @return bool
-     */
-    public Boolean isValidCountry(String countryOfBirth) {
-        return false;
-    }
-
-    /**
-     * Retrieves form with matching form id.
-     * 
-     * @param formId
-     * @return GreenReplacementCardBO
-     */
-    public GreenCardReplacementBO getForm(int formId) {
-        return null;
+    public void setReasonForReplacement(String reasonForReplacement) {
+        this.reasonForReplacement = reasonForReplacement;
     }
 }

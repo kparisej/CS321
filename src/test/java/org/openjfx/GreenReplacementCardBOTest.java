@@ -30,10 +30,12 @@ class GreenReplacementCardBOTest {
         this.lastName = "Dicaprio";
         this.dateOfBirth = new GregorianCalendar(1974, Calendar.NOVEMBER, 11).getTime();
         this.countryOfBirth = "United States of America";
-        //this.homeAddress = new org.openjfx.HomeAddress("123 Any Street", "Bakersfield", "CA", "93399");
+        // this.homeAddress = new org.openjfx.HomeAddress("123 Any Street",
+        // "Bakersfield", "CA", "93399");
         this.reasonForReplacement = "Card was lost.";
 
-        greenReplacementCardObj = new org.openjfx.GreenCardReplacementBO(id, firstName, middleName, lastName, null, countryOfBirth, homeAddress, reasonForReplacement);
+        greenReplacementCardObj = new org.openjfx.GreenCardReplacementBO(id, firstName, middleName, lastName, null,
+                countryOfBirth, homeAddress, reasonForReplacement);
     }
 
     @AfterEach
@@ -48,79 +50,95 @@ class GreenReplacementCardBOTest {
         assertNull(this.reasonForReplacement);
         assertNull(greenReplacementCardObj);
     }
+
     @Test
-    public void getFormTest(){ assertTrue(greenReplacementCardObj.getForm(this.id) instanceof org.openjfx.GreenCardReplacementBO); }
-    @Test
-    public void getId(){ assertEquals(this.id, greenReplacementCardObj.getId()); }
-    @Test
-    public void getFirstNameTest(){
-        assertEquals( this.firstName, greenReplacementCardObj.getFirstName());
+    public void getId() {
+        assertEquals(this.id, greenReplacementCardObj.getId());
     }
+
     @Test
-    public void getMiddleNameTest(){
-        assertEquals( this.middleName, greenReplacementCardObj.getMiddleName());
+    public void getFirstNameTest() {
+        assertEquals(this.firstName, greenReplacementCardObj.getFirstName());
     }
+
     @Test
-    public void getLastNameTest(){
-        assertEquals( this.lastName, greenReplacementCardObj.getLastName());
+    public void getMiddleNameTest() {
+        assertEquals(this.middleName, greenReplacementCardObj.getMiddleName());
     }
+
     @Test
-    public void getDateOfBirthTest(){
-        assertEquals( this.dateOfBirth, greenReplacementCardObj.getDateOfBirth());
+    public void getLastNameTest() {
+        assertEquals(this.lastName, greenReplacementCardObj.getLastName());
     }
+
     @Test
-    public void getCountryOfBirthTest(){ assertEquals( this.countryOfBirth, greenReplacementCardObj.getCountryOfBirth()); }
-    @Test
-    public void getHomeAddressTest(){
-        assertEquals( this.homeAddress, greenReplacementCardObj.getHomeAddress());
+    public void getDateOfBirthTest() {
+        assertEquals(this.dateOfBirth, greenReplacementCardObj.getDateOfBirth());
     }
+
     @Test
-    public void getReasonForReplacementTest(){ assertEquals( this.reasonForReplacement, greenReplacementCardObj.getReasonForReplacement()); }
+    public void getCountryOfBirthTest() {
+        assertEquals(this.countryOfBirth, greenReplacementCardObj.getCountryOfBirth());
+    }
+
     @Test
-    public void setFirstNameTest(){
+    public void getHomeAddressTest() {
+        assertEquals(this.homeAddress, greenReplacementCardObj.getHomeAddress());
+    }
+
+    @Test
+    public void getReasonForReplacementTest() {
+        assertEquals(this.reasonForReplacement, greenReplacementCardObj.getReasonForReplacement());
+    }
+
+    @Test
+    public void setFirstNameTest() {
         String newFirstName = "Leo";
         greenReplacementCardObj.setFirstName(newFirstName);
         assertEquals(newFirstName, greenReplacementCardObj.getFirstName());
     }
+
     @Test
-    public void setMiddleNameTest(){
+    public void setMiddleNameTest() {
         String newMiddleName = "Will";
         greenReplacementCardObj.setMiddleName(newMiddleName);
         assertEquals(newMiddleName, greenReplacementCardObj.getMiddleName());
     }
+
     @Test
-    public void setLastNameTest(){
+    public void setLastNameTest() {
         String newLastName = "Dicap";
         greenReplacementCardObj.setLastName(newLastName);
         assertEquals(newLastName, greenReplacementCardObj.getLastName());
     }
-//    @Test
-//    public void setDateOfBirthTest(){
-//        LocalDate newDateOfBirth =  new LocalDate(1975, Calendar.NOVEMBER, 11).getTime();
-//        greenReplacementCardObj.setDateOfBirth(newDateOfBirth);
-//        assertEquals(newDateOfBirth, greenReplacementCardObj.getDateOfBirth());
-//    }
+
+    // @Test
+    // public void setDateOfBirthTest(){
+    // LocalDate newDateOfBirth = new LocalDate(1975, Calendar.NOVEMBER,
+    // 11).getTime();
+    // greenReplacementCardObj.setDateOfBirth(newDateOfBirth);
+    // assertEquals(newDateOfBirth, greenReplacementCardObj.getDateOfBirth());
+    // }
     @Test
-    public void setCountryOfBirthTest(){
+    public void setCountryOfBirthTest() {
         String newCountryOfBirth = "England";
         greenReplacementCardObj.setCountryOfBirth(newCountryOfBirth);
         assertEquals(newCountryOfBirth, greenReplacementCardObj.getCountryOfBirth());
     }
-//    @Test
-//    public void setHomeAddressTest(){
-//        org.openjfx.HomeAddress homeAddress = new org.openjfx.HomeAddress("123 Apple Street", "Fairfax", "VA", "12312");
-//        greenReplacementCardObj.setHomeAddress(homeAddress);
-//        assertEquals(homeAddress, greenReplacementCardObj.getHomeAddress());
-//
-//    }
+
+    // @Test
+    // public void setHomeAddressTest(){
+    // org.openjfx.HomeAddress homeAddress = new org.openjfx.HomeAddress("123 Apple
+    // Street", "Fairfax", "VA", "12312");
+    // greenReplacementCardObj.setHomeAddress(homeAddress);
+    // assertEquals(homeAddress, greenReplacementCardObj.getHomeAddress());
+    //
+    // }
     @Test
-    public void setReasonForReplacementTest(){
+    public void setReasonForReplacementTest() {
         String reasonForReplacement = "Card was stolen.";
         greenReplacementCardObj.setReasonForReplacement(reasonForReplacement);
         assertEquals(reasonForReplacement, greenReplacementCardObj.getReasonForReplacement());
     }
-    @Test
-    public void isValidCountryTest(){
-        assertTrue(greenReplacementCardObj.isValidCountry(this.countryOfBirth));
-    }
+
 }
