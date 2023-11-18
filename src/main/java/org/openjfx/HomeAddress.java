@@ -1,5 +1,7 @@
 package org.openjfx;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class HomeAddress {
     private String apartmentNumber;
     private String streetName;
@@ -8,7 +10,10 @@ public class HomeAddress {
     private String zipCode;
 
     // Constructor
-    public HomeAddress(String streetName, String apartmentNumber, String city, String state, String zipCode) {
+    public HomeAddress(@JsonProperty("streetName") String streetName,
+            @JsonProperty("apartmentNumber") String apartmentNumber, @JsonProperty("city") String city,
+            @JsonProperty("state") String state,
+            @JsonProperty("zipCode") String zipCode) {
         this.streetName = streetName;
         this.apartmentNumber = apartmentNumber;
         this.city = city;

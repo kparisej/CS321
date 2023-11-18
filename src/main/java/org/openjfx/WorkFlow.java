@@ -34,12 +34,4 @@ public class WorkFlow {
     public void setStep(String step) {
         this.step = step;
     }
-
-    public static void main(String[] args) {
-        File file = new File("C:/Users/Dell/Documents/GitHub/CS321/src/main/java/org/openjfx/info.json");
-        WorkFlowReader w = new WorkFlowReader(file);
-        w.editStep(w.getId("Approve"), "Done");
-        w.addPost(6, "Review");
-
-    }
 }
