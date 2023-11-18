@@ -18,6 +18,10 @@ public class GreenCardReplacementBO {
     private HomeAddress homeAddress;
     private String reasonForReplacement;
 
+    public GreenCardReplacementBO() {
+
+    }
+
     // Constructor
     public GreenCardReplacementBO(@JsonProperty("id") int id, @JsonProperty("firstName") String firstName,
             @JsonProperty("middleName") String middleName, @JsonProperty("lastName") String lastName,
