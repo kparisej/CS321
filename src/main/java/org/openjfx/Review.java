@@ -88,6 +88,7 @@ public class Review extends Application {
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
         hbBtn.getChildren().addAll(btnCancel, pull, btnSave);
+        btnSave.setDisable(true);
         grid.add(hbBtn, 1, 12);
 
         // Cancel button
@@ -138,6 +139,8 @@ public class Review extends Application {
                 stateField.setText(x.getHomeAddress().getState());
                 zipcodeField.setText(x.getHomeAddress().getZipCode());
                 reasonForReplacementArea.setText(x.getReasonForReplacement());
+                btnSave.setDisable(false);
+
             }
         });
 
@@ -161,6 +164,9 @@ public class Review extends Application {
                 FormReader f = new FormReader(file1);
                 WorkFlowReader w = new WorkFlowReader(file2);
                 int id = w.getId("Review");
+                if (id == -1) {
+
+                }
                 GreenCardReplacementBO x = new GreenCardReplacementBO();
                 x = f.getForm(id);
                 HomeAddress h = new HomeAddress(streetField.getText(), aptNumberField.getText(), cityField.getText(),
@@ -181,6 +187,7 @@ public class Review extends Application {
                 stateField.setText("");
                 zipcodeField.setText("");
                 reasonForReplacementArea.setText("");
+                btnSave.setDisable(true);
             }
         });
 
