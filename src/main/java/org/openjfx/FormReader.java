@@ -9,17 +9,32 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
 public class FormReader {
     static List<GreenCardReplacementBO> forms;
     static ObjectMapper mapper = new ObjectMapper();
     private static File f;
 
-    public static void addForm(int id, String firstName, String middleName, String lastName,
+    public static void addForm(String firstName, String middleName, String lastName,
             String email,
             String dateOfBirth,
             String countryOfBirth, HomeAddress homeAddress,
             String reasonForReplacement) {
+        Random random = new Random();
+        boolean inList;
+        int id;
+
+        do {
+            inList = false;
+            id = 1 + random.nextInt(10000);
+            for (GreenCardReplacementBO wf : forms) {
+                if (wf.getId() == (id)) {
+                    inList = true;
+                }
+            }
+        } while (inList == true);
+
         // Create a new WorkFlow object with the provided ID and step
         GreenCardReplacementBO newGreenCardReplacementBO = new GreenCardReplacementBO(id, firstName, middleName,
                 lastName, email,
