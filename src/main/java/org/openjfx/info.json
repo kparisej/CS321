@@ -9,7 +9,7 @@
     },
     {
         "id": 3,
-        "step": "Review"
+        "step": "Approve"
     },
     {
         "id": 0,
@@ -21,6 +21,6 @@
     },
     {
         "id": 7691,
-        "step": "Review"
+        "step": "Approve"
     }
 ]

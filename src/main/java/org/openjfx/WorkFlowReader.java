@@ -77,7 +77,7 @@ public class WorkFlowReader {
                 return wf.getId();
             }
         }
-        return 0;
+        return -1;
     }
 
     public WorkFlowReader(File file) {
