@@ -234,7 +234,7 @@ public class App extends Application {
             zipcode = zipcodeText.getText();
             homeAddress = new HomeAddress(streetName, apartmentNumber, city, state,zipcode);
             reasonForReplacement = reasonForReplacementDropdown.getValue();
-            greenCardReplacementBO = new GreenCardReplacementBO(id, firstName, middleName, lastName, dateOfBirth,countryOfBirth, homeAddress,reasonForReplacement);
+            //greenCardReplacementBO = new GreenCardReplacementBO(id, firstName, middleName, lastName, dateOfBirth,countryOfBirth, homeAddress,reasonForReplacement);
 
             if( firstName != null && lastName != null && dateOfBirth != null && countryOfBirth != null && streetName!= null && state != null && zipcode != null && reasonForReplacement != null){
                 printFormContent();

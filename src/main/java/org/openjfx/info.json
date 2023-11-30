@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 [{"id":1,"step":"Approve"},{"id":2,"step":"Done"},{"id":3,"step":"Done"},{"id":5,"step":"Done"},{"id":6,"step":"Review"}]
+=======
+[{"id":1,"step":"Done"},{"id":2,"step":"Done"},{"id":3,"step":"Review"},{"id":0,"step":"Done"}]
+>>>>>>> Stashed changes

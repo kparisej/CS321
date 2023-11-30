@@ -9,12 +9,27 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
+<<<<<<< Updated upstream
 
 import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
 
 
+=======
+import java.io.File;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.Date;
+// For Email
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+>>>>>>> Stashed changes
 
 public class Approval extends Application {
 
@@ -33,6 +48,36 @@ public class Approval extends Application {
         return forms.getForm(workflow.getId("Approve"));
     }
 
+<<<<<<< Updated upstream
+=======
+    public void sendEmail(String message, String emailRecip){
+        String address = "dawdsdaswaws@gmail.com"; // Obv burner account
+        String password = "cway xbwp kipm jjnr";
+        Properties emailProperties = new Properties();
+        emailProperties.put("mail.smtp.auth", "true");
+        emailProperties.put("mail.smtp.ssl.enable", "true");
+        emailProperties.put("mail.smtp.host", "smtp.gmail.com");
+        emailProperties.put("mail.smtp.port", "465");
+        var callback = new javax.mail.Authenticator(){
+            protected PasswordAuthentication getPasswordAuthentication(){
+                return new PasswordAuthentication(address, password);
+            }
+        };
+        var emailSession = Session.getInstance(emailProperties, callback);
+        Message email = new MimeMessage(emailSession);
+        try {
+            email.setFrom(new InternetAddress("dawdsdaswaws@gmail.com"));
+            email.setRecipient(Message.RecipientType.TO, new InternetAddress(emailRecip));
+            email.setText(message);
+            email.setSubject("CS321 Group 31 Green Card Renewal");
+            email.setSentDate(new Date());
+            Transport.send(email);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+>>>>>>> Stashed changes
     public void checkQueueForNew(){
         Timer checkFrequently = new Timer();
         checkFrequently.schedule(new TimerTask() {
@@ -47,6 +92,7 @@ public class Approval extends Application {
         },0, 2000); //0 = now, 2000 ms = every 2 seconds
     }
 
+<<<<<<< Updated upstream
 
     public void onButton(boolean wasApproved, String comment){
         if(currentForm != null){ //Do this next sprint
@@ -62,6 +108,22 @@ public class Approval extends Application {
 
             }
 
+=======
+    public void onButton(boolean wasApproved, String comment){
+        if(currentForm != null){ //Do this next sprint
+            String emailString = "";
+            if(wasApproved){
+                emailString = "Congratulations!\nYour application was approved for Green Card Renewal";
+            }
+            else{
+                emailString = "Your application was denied for Green Card Renewal";
+            }
+            if(comment != null){
+                emailString = emailString + "\nThe approver left this comment: " + comment;
+            }
+            final String message = emailString;
+            new Thread(() -> sendEmail(message, currentForm.getEmail())).start(); // Done in a async way to prevent stalling.
+>>>>>>> Stashed changes
         }
         errorText.setText(""); // New form no errors... yet
         currentForm = getNewForm();
@@ -87,6 +149,10 @@ public class Approval extends Application {
         return applicationDetails.toString();
     }
 
+<<<<<<< Updated upstream
+=======
+    
+>>>>>>> Stashed changes
     @Override
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Approval Screen");
@@ -115,6 +181,15 @@ public class Approval extends Application {
                         commentToSend = comment.getText();
                     }
                     onButton(false, commentToSend);
+<<<<<<< Updated upstream
+=======
+                    comment.setText("");
+                    sendComment.setSelected(false);
+                    checkBox1.setSelected(false);
+                    checkBox2.setSelected(false);
+                    checkBox3.setSelected(false);
+                    checkBox4.setSelected(false);
+>>>>>>> Stashed changes
                 }
             }
         });
@@ -130,6 +205,15 @@ public class Approval extends Application {
                         commentToSend = comment.getText();
                     }
                     onButton(true, commentToSend);
+<<<<<<< Updated upstream
+=======
+                    comment.setText("");
+                    sendComment.setSelected(false);
+                    checkBox1.setSelected(false);
+                    checkBox2.setSelected(false);
+                    checkBox3.setSelected(false);
+                    checkBox4.setSelected(false);
+>>>>>>> Stashed changes
                 }
                 else{
                     errorText.setText("The checklist must be filled out when trying to approve someone");
@@ -176,12 +260,20 @@ public class Approval extends Application {
         if(currentForm == null){
             checkQueueForNew();
         }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     }
 
 
     public static void main(String[] args) {
+<<<<<<< Updated upstream
         launch(args);
     
+=======
+        
+        launch(args);
+>>>>>>> Stashed changes
     }
 }
