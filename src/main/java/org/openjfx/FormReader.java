@@ -16,7 +16,7 @@ public class FormReader {
     static ObjectMapper mapper = new ObjectMapper();
     private static File f;
 
-    public static void addForm(String firstName, String middleName, String lastName,
+    public static void addForm(WorkFlowReader WFR, String firstName, String middleName, String lastName,
             String email,
             String dateOfBirth,
             String countryOfBirth, HomeAddress homeAddress,
@@ -34,7 +34,7 @@ public class FormReader {
                 }
             }
         } while (inList == true);
-
+        WFR.addPost(id, "Review");
         // Create a new WorkFlow object with the provided ID and step
         GreenCardReplacementBO newGreenCardReplacementBO = new GreenCardReplacementBO(id, firstName, middleName,
                 lastName, email,

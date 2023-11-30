@@ -19,7 +19,7 @@ public class tester {
         // f.getForm(id).getReasonForReplacement());
         System.out.println(x.getFirstName());
         HomeAddress l = new HomeAddress("abc Street", "1212", "Sterling", "VA", "20164");
-        f.addForm("Naim", "M", "H", "Sesamestreet@gmail.com", "08/20/23", "Murica", l,
+        f.addForm(w, "Naim", "M", "H", "Sesamestreet@gmail.com", "08/20/23", "Murica", l,
                 "U.S. Resident card will expire soon");
 
     }

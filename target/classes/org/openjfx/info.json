@@ -14,5 +14,13 @@
     {
         "id": 0,
         "step": "Done"
+    },
+    {
+        "id": 275,
+        "step": "Approve"
+    },
+    {
+        "id": 7691,
+        "step": "Review"
     }
 ]
