@@ -9,14 +9,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
-<<<<<<< Updated upstream
-
-import java.io.File;
-import java.util.Timer;
-import java.util.TimerTask;
-
-
-=======
 import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -29,7 +21,6 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
->>>>>>> Stashed changes
 
 public class Approval extends Application {
 
@@ -48,8 +39,6 @@ public class Approval extends Application {
         return forms.getForm(workflow.getId("Approve"));
     }
 
-<<<<<<< Updated upstream
-=======
     public void sendEmail(String message, String emailRecip){
         String address = "dawdsdaswaws@gmail.com"; // Obv burner account
         String password = "cway xbwp kipm jjnr";
@@ -77,7 +66,6 @@ public class Approval extends Application {
         }
     }
 
->>>>>>> Stashed changes
     public void checkQueueForNew(){
         Timer checkFrequently = new Timer();
         checkFrequently.schedule(new TimerTask() {
@@ -92,23 +80,6 @@ public class Approval extends Application {
         },0, 2000); //0 = now, 2000 ms = every 2 seconds
     }
 
-<<<<<<< Updated upstream
-
-    public void onButton(boolean wasApproved, String comment){
-        if(currentForm != null){ //Do this next sprint
-            String emailString;
-            if(wasApproved){
-                //Setup Email here
-                //What should happen when applicant is approved
-            }
-            else{
-                //See above
-            }
-            if(comment != null){
-
-            }
-
-=======
     public void onButton(boolean wasApproved, String comment){
         if(currentForm != null){ //Do this next sprint
             String emailString = "";
@@ -123,7 +94,6 @@ public class Approval extends Application {
             }
             final String message = emailString;
             new Thread(() -> sendEmail(message, currentForm.getEmail())).start(); // Done in a async way to prevent stalling.
->>>>>>> Stashed changes
         }
         errorText.setText(""); // New form no errors... yet
         currentForm = getNewForm();
@@ -149,10 +119,7 @@ public class Approval extends Application {
         return applicationDetails.toString();
     }
 
-<<<<<<< Updated upstream
-=======
     
->>>>>>> Stashed changes
     @Override
     public void start(Stage primaryStage) throws Exception{
         primaryStage.setTitle("Approval Screen");
@@ -181,15 +148,12 @@ public class Approval extends Application {
                         commentToSend = comment.getText();
                     }
                     onButton(false, commentToSend);
-<<<<<<< Updated upstream
-=======
                     comment.setText("");
                     sendComment.setSelected(false);
                     checkBox1.setSelected(false);
                     checkBox2.setSelected(false);
                     checkBox3.setSelected(false);
                     checkBox4.setSelected(false);
->>>>>>> Stashed changes
                 }
             }
         });
@@ -205,19 +169,25 @@ public class Approval extends Application {
                         commentToSend = comment.getText();
                     }
                     onButton(true, commentToSend);
-<<<<<<< Updated upstream
-=======
                     comment.setText("");
                     sendComment.setSelected(false);
                     checkBox1.setSelected(false);
                     checkBox2.setSelected(false);
                     checkBox3.setSelected(false);
                     checkBox4.setSelected(false);
->>>>>>> Stashed changes
                 }
                 else{
                     errorText.setText("The checklist must be filled out when trying to approve someone");
                 }
+            }
+        });
+
+        Button returnHome = new Button();
+        returnHome.setText("Return To Homescreen");
+        returnHome.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                // Code to return to home screen on click.
             }
         });
 
@@ -253,27 +223,19 @@ public class Approval extends Application {
         root.add(sendComment, 1,52);
 
         root.add(buttons,1,75);
+        root.add(returnHome, 1, 76);
         root.add(errorText, 1, 80);
+        
         primaryStage.setScene(new Scene(root, 800, 800));
         primaryStage.show();
 
         if(currentForm == null){
             checkQueueForNew();
         }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
     }
 
 
     public static void main(String[] args) {
-<<<<<<< Updated upstream
         launch(args);
-    
-=======
-        
-        launch(args);
->>>>>>> Stashed changes
     }
 }
