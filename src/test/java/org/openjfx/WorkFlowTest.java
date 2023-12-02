@@ -1,12 +1,20 @@
 package org.openjfx;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.LinkedList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class WorkFlowTest {
-
     @Test
-    public void constructorTest(){
+    public void test1() {
         int expectedId = 5;
         String expectedString = "Test";
         var workflow = new WorkFlow(expectedId, expectedString);
@@ -15,15 +23,15 @@ class WorkFlowTest {
     }
 
     @Test
-    public void getIdTest(){
+    public void test2() {
         int expectedId = 5;
         var workflow = new WorkFlow(expectedId, null);
         assertEquals(workflow.getId(), expectedId);
-        assertNotEquals(expectedId-1, workflow.getId());
+        assertNotEquals(expectedId - 1, workflow.getId());
     }
 
     @Test
-    public void getStringTest(){
+    public void test3() {
         String expectedString = "Test";
         var workflow = new WorkFlow(-1, expectedString);
         assertEquals(workflow.getStep(), expectedString);
@@ -31,7 +39,7 @@ class WorkFlowTest {
     }
 
     @Test
-    public void setIdTest(){
+    public void test4() {
         int original = 5;
         int newSetValue = 8;
         var workflow = new WorkFlow(original, null);
@@ -41,7 +49,7 @@ class WorkFlowTest {
     }
 
     @Test
-    public void setStringTest(){
+    public void test5() {
         String original = "Old";
         String newSetValue = "New";
         var workflow = new WorkFlow(-1, original);
@@ -49,4 +57,57 @@ class WorkFlowTest {
         assertEquals(workflow.getStep(), newSetValue);
         assertNotEquals(original, workflow.getStep());
     }
+
+    @Test
+    public void test6() {
+        File testerFile = new File("src/main/resources/WorkFlowTester.json");
+        WorkFlowReader test8 = new WorkFlowReader(testerFile);
+    }
+
+    File testerFile = new File("src/main/resources/WorkFlowTest.json");
+    WorkFlowReader wftReader = new WorkFlowReader(testerFile);
+
+    @Test
+    public void test7() {
+        wftReader.addPost(200, "Review");
+    }
+
+    @Test
+    public void test8() {
+        assertEquals(200, wftReader.getId("Review"));
+    }
+
+    @Test
+    public void test9() {
+        wftReader.addPost(201, "Approve");
+    }
+
+    @Test
+    public void test10() {
+        assertEquals(201, wftReader.getId("Approve"));
+    }
+
+    @Test
+    public void test11() {
+        wftReader.addPost(202, "Done");
+    }
+
+    @Test
+    public void test12() {
+        assertEquals(202, wftReader.getId("Done"));
+    }
+
+    @Test
+    public void test13() {
+        wftReader.editStep(201, "Done");
+
+        wftReader.addPost(203, "Done");
+        wftReader.editStep(203, "Approve");
+    }
+
+    @Test
+    public void test14() {
+        assertEquals(203, wftReader.getId("Approve"));
+    }
+
 }
