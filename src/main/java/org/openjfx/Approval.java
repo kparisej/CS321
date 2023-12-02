@@ -15,6 +15,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import java.util.Properties;
+
+// For Email
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;

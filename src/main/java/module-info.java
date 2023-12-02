@@ -3,6 +3,7 @@ module org.openjfx {
     requires json.simple;
     requires com.fasterxml.jackson.annotation;
     requires com.fasterxml.jackson.databind;
+    requires activation;
     requires java.mail;
     exports org.openjfx;
     opens org.openjfx;
