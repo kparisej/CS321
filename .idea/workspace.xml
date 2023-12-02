@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046491fe-0935-4218-baab-8a1af249afbe" name="Changes" comment="&quot;working app&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/WorkFlowTest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Approval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Approval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/openjfx/WorkFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openjfx/WorkFlowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/GreenCardReplacementBO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/GreenCardReplacementBO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/Review.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppConfig">
+  <component name="RunManager" selected="JUnit.WorkFlowTest">
     <configuration name="AppConfig" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="MAIN_CLASS_NAME" value="org.openjfx.HomeApp" />
       <module name="sample" />
@@ -109,22 +111,6 @@
       <option name="MAIN_CLASS_NAME" value="org.openjfx.GreenReplacementCardBOTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GreenReplacementCardBOTest.homeAddressIsNullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sample" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.openjfx.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.openjfx" />
-      <option name="MAIN_CLASS_NAME" value="org.openjfx.GreenReplacementCardBOTest" />
-      <option name="METHOD_NAME" value="homeAddressIsNullTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -177,21 +163,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WorkFlowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.openjfx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.openjfx" />
+      <option name="MAIN_CLASS_NAME" value="org.openjfx.WorkFlowTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.AppConfig" />
+      <item itemvalue="JUnit.WorkFlowTest" />
       <item itemvalue="JUnit.GreenReplacementCardBOTest" />
-      <item itemvalue="JUnit.GreenReplacementCardBOTest.homeAddressIsNullTest" />
       <item itemvalue="JUnit.GreenReplacementCardBOTest.idIsNegativeTest" />
       <item itemvalue="JUnit.GreenReplacementCardBOTest.reasonForReplacementIsEmptyTest" />
       <item itemvalue="JUnit.GreenReplacementCardBOTest.reasonForReplacementIsNullTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WorkFlowTest" />
         <item itemvalue="JUnit.GreenReplacementCardBOTest" />
         <item itemvalue="JUnit.GreenReplacementCardBOTest.idIsNegativeTest" />
         <item itemvalue="JUnit.GreenReplacementCardBOTest.reasonForReplacementIsEmptyTest" />
         <item itemvalue="JUnit.GreenReplacementCardBOTest.reasonForReplacementIsNullTest" />
-        <item itemvalue="JUnit.GreenReplacementCardBOTest.homeAddressIsNullTest" />
       </list>
     </recent_temporary>
   </component>
