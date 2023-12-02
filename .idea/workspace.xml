@@ -4,63 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046491fe-0935-4218-baab-8a1af249afbe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_21_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_21_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_21_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_21_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_21_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_21_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/FormReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/HomeApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/WorkFlowReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GreenCardReplacementForms.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GreenCardReplacementWorkFlow.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/approve_form_button_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data_entry_form_button_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/form_submitted_done_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/review_form_button_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/DataEntryApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/GreenCardReplacementBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/GreenCardReplacementBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/HomeAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/HomeAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Approval.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openjfx/WorkFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openjfx/WorkFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/openjfx/GreenReplacementCardBOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openjfx/GreenReplacementCardBOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/openjfx/WorkFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/openjfx/WorkFlowTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/App$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/FormInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/GreenCardReplacementBO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/GreenCardReplacementBO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/HomeAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/HomeAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Main$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/WorkFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/WorkFlow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/openjfx/GreenReplacementCardBOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/openjfx/GreenReplacementCardBOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/openjfx/WorkFlowTest.class" beforeDir="false" />
+    <list default="true" id="046491fe-0935-4218-baab-8a1af249afbe" name="Changes" comment="working app">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/openjfx/Approval.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/openjfx/Approval.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,6 +211,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working app" />
+    <option name="LAST_COMMIT_MESSAGE" value="working app" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
