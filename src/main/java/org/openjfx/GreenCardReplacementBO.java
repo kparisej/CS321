@@ -13,8 +13,8 @@ public class GreenCardReplacementBO {
     private HomeAddress homeAddress;
     private String reasonForReplacement;
 
+    // Default Constructor
     public GreenCardReplacementBO() {
-
     }
 
     // Constructor
