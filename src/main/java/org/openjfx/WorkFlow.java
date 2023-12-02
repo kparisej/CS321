@@ -1,32 +1,35 @@
 package org.openjfx;
 
-import java.util.LinkedList;
-
-class FormInfo{
-    int id;
-    String step;
-}
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WorkFlow {
+    private int id;
+    private String step;
 
-    // Queue that contains a set of the green card form, the application ID, and the string of the current step
-    public LinkedList<FormInfo> applicationQueue;
-
-    public WorkFlow(){
-        applicationQueue = new LinkedList<FormInfo>();
+    @JsonCreator
+    public WorkFlow(@JsonProperty("id") int id, @JsonProperty("Step") String step) {
+        this.id = id;
+        this.step = step;
     }
 
-    // Update a specific application in the queue
-    public void update(int applicationID){
-
+    // Getter for 'id' field
+    public int getId() {
+        return id;
     }
 
-    public int getID(String review){
-        return -1;
+    // Setter for 'id' field
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void displayWorkFlow(){
-
+    // Getter for 'step' field
+    public String getStep() {
+        return step;
     }
 
+    // Setter for 'step' field
+    public void setStep(String step) {
+        this.step = step;
+    }
 }

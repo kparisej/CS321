@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "middleName": "Jacqavius",
+    "lastName": "Doe",
+    "email": "jd@gmail.com",
+    "dateOfBirth": "2000-12-12",
+    "countryOfBirth": "Columbia",
+    "homeAddress": {
+      "streetName": "Sesame",
+      "apartmentNumber": "123",
+      "city": "Fairfax",
+      "state": "VA",
+      "zipCode": "22102"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 2,
+    "firstName": "Naim",
+    "middleName": "M",
+    "lastName": "H",
+    "email": "nhossa@gmail.com",
+    "dateOfBirth": "2003-11-11",
+    "countryOfBirth": "Uruguay",
+    "homeAddress": {
+      "streetName": "apple",
+      "apartmentNumber": "12",
+      "city": "Reston",
+      "state": "Virginia",
+      "zipCode": "22102"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 3,
+    "firstName": "John",
+    "middleName": "Elbert",
+    "lastName": "Doe",
+    "email": "jd@gmail.com",
+    "dateOfBirth": "2000-12-12",
+    "countryOfBirth": "Columbia",
+    "homeAddress": {
+      "streetName": "Sesame",
+      "apartmentNumber": "123",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zipCode": "22102"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 0,
+    "firstName": "Naim",
+    "middleName": "M",
+    "lastName": "H",
+    "email": "nhossa@gmail.com",
+    "dateOfBirth": "2003-11-11",
+    "countryOfBirth": "Uruguay",
+    "homeAddress": {
+      "streetName": "apple",
+      "apartmentNumber": "12",
+      "city": "Reston",
+      "state": "Virginia",
+      "zipCode": "22102"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 2887,
+    "firstName": "Naim",
+    "middleName": "M",
+    "lastName": "H",
+    "email": "Sesamestreet@gmail.com",
+    "dateOfBirth": "08/20/23",
+    "countryOfBirth": "Murica",
+    "homeAddress": {
+      "streetName": "abc Street",
+      "apartmentNumber": "1212",
+      "city": "Sterling",
+      "state": "VA",
+      "zipCode": "20164"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 411,
+    "firstName": "Naim",
+    "middleName": "M",
+    "lastName": "H",
+    "email": "Sesamestreet@gmail.com",
+    "dateOfBirth": "08/20/23",
+    "countryOfBirth": "Murica",
+    "homeAddress": {
+      "streetName": "abc Street",
+      "apartmentNumber": "1212",
+      "city": "Sterling",
+      "state": "VA",
+      "zipCode": "20164"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 275,
+    "firstName": "Naim",
+    "middleName": "M",
+    "lastName": "H",
+    "email": "Sesamestreet@gmail.com",
+    "dateOfBirth": "08/20/23",
+    "countryOfBirth": "Murica",
+    "homeAddress": {
+      "streetName": "abc Street",
+      "apartmentNumber": "1212",
+      "city": "Sterling",
+      "state": "VA",
+      "zipCode": "20164"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 7691,
+    "firstName": "Naim",
+    "middleName": "Muhtasim",
+    "lastName": "Hossain",
+    "email": "Sesamestreet@gmail.com",
+    "dateOfBirth": "08/20/23",
+    "countryOfBirth": "Chad",
+    "homeAddress": {
+      "streetName": "Wakanda ",
+      "apartmentNumber": "1212",
+      "city": "Sterling",
+      "state": "NA",
+      "zipCode": "NA"
+    },
+    "reasonForReplacement": "U.S. Resident card will expire soon"
+  },
+  {
+    "id": 262,
+    "firstName": "kasder",
+    "middleName": "",
+    "lastName": "dfasdf",
+    "email": "kjadf@gmail.com",
+    "dateOfBirth": "2023-11-14",
+    "countryOfBirth": "Bangladesh",
+    "homeAddress": {
+      "streetName": "123 strawberry",
+      "apartmentNumber": "",
+      "city": "Bloomingdale",
+      "state": "Illinois",
+      "zipCode": "21345"
+    },
+    "reasonForReplacement": "U.S. Resident card was stolen"
+  }
+]

@@ -1,13 +1,7 @@
 package org.openjfx;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,9 +11,10 @@ class GreenReplacementCardBOTest {
     private String firstName;
     private String middleName;
     private String lastName;
-    private Date dateOfBirth;
+    private String email;
+    private String dateOfBirth;
     private String countryOfBirth;
-    private org.openjfx.HomeAddress homeAddress;
+    private HomeAddress homeAddress;
     private String reasonForReplacement;
 
     @BeforeEach
@@ -28,54 +23,65 @@ class GreenReplacementCardBOTest {
         this.firstName = "Leonardo";
         this.middleName = "Wilhelm";
         this.lastName = "Dicaprio";
-        this.dateOfBirth = new GregorianCalendar(1974, Calendar.NOVEMBER, 11).getTime();
+        this.email = "leonardo_dicaprio@gmail.com";
+        this.dateOfBirth = "2000-6-20";
         this.countryOfBirth = "United States of America";
-        //this.homeAddress = new org.openjfx.HomeAddress("123 Any Street", "Bakersfield", "CA", "93399");
+        this.homeAddress = new HomeAddress("123 Any Street", null, "Bakersfield", "CA", "93399");
         this.reasonForReplacement = "Card was lost.";
 
-        greenReplacementCardObj = new org.openjfx.GreenCardReplacementBO(id, firstName, middleName, lastName, null, countryOfBirth, homeAddress, reasonForReplacement);
+        greenReplacementCardObj = new GreenCardReplacementBO(id, firstName, middleName, lastName, email, dateOfBirth, countryOfBirth, homeAddress, reasonForReplacement);
     }
 
-    @AfterEach
-    void tearDown() {
-        assertNull(this.id);
-        assertNull(this.firstName);
-        assertNull(this.middleName);
-        assertNull(this.lastName);
-        assertNull(this.dateOfBirth);
-        assertNull(this.countryOfBirth);
-        assertNull(this.homeAddress);
-        assertNull(this.reasonForReplacement);
-        assertNull(greenReplacementCardObj);
+    @Test
+    public void getIdTest() {
+        assertEquals(this.id, greenReplacementCardObj.getId());
+    }
+
+    @Test
+    public void getFirstNameTest() {
+        assertEquals(this.firstName, greenReplacementCardObj.getFirstName());
+    }
+
+    @Test
+    public void getMiddleNameTest() {
+        assertEquals(this.middleName, greenReplacementCardObj.getMiddleName());
+    }
+
+    @Test
+    public void getLastNameTest() {
+        assertEquals(this.lastName, greenReplacementCardObj.getLastName());
     }
     @Test
-    public void getFormTest(){ assertTrue(greenReplacementCardObj.getForm(this.id) instanceof org.openjfx.GreenCardReplacementBO); }
-    @Test
-    public void getId(){ assertEquals(this.id, greenReplacementCardObj.getId()); }
-    @Test
-    public void getFirstNameTest(){
-        assertEquals( this.firstName, greenReplacementCardObj.getFirstName());
+    public void getEmail(){
+        assertEquals(this.email, greenReplacementCardObj.getEmail());
     }
+
     @Test
-    public void getMiddleNameTest(){
-        assertEquals( this.middleName, greenReplacementCardObj.getMiddleName());
+    public void getDateOfBirthTest() {
+        assertEquals(this.dateOfBirth, greenReplacementCardObj.getDateOfBirth());
     }
+
     @Test
-    public void getLastNameTest(){
-        assertEquals( this.lastName, greenReplacementCardObj.getLastName());
+    public void getCountryOfBirthTest() {
+        assertEquals(this.countryOfBirth, greenReplacementCardObj.getCountryOfBirth());
     }
+
     @Test
-    public void getDateOfBirthTest(){
-        assertEquals( this.dateOfBirth, greenReplacementCardObj.getDateOfBirth());
+    public void getHomeAddressTest() {
+        assertEquals(this.homeAddress, greenReplacementCardObj.getHomeAddress());
     }
+
     @Test
-    public void getCountryOfBirthTest(){ assertEquals( this.countryOfBirth, greenReplacementCardObj.getCountryOfBirth()); }
-    @Test
-    public void getHomeAddressTest(){
-        assertEquals( this.homeAddress, greenReplacementCardObj.getHomeAddress());
+    public void getReasonForReplacementTest() {
+        assertEquals(this.reasonForReplacement, greenReplacementCardObj.getReasonForReplacement());
     }
+
     @Test
-    public void getReasonForReplacementTest(){ assertEquals( this.reasonForReplacement, greenReplacementCardObj.getReasonForReplacement()); }
+    public void setIdTest() {
+        int newId = 1234;
+        greenReplacementCardObj.setId(newId);
+        assertEquals(newId, greenReplacementCardObj.getId());
+    }
     @Test
     public void setFirstNameTest(){
         String newFirstName = "Leo";
@@ -94,25 +100,31 @@ class GreenReplacementCardBOTest {
         greenReplacementCardObj.setLastName(newLastName);
         assertEquals(newLastName, greenReplacementCardObj.getLastName());
     }
-//    @Test
-//    public void setDateOfBirthTest(){
-//        LocalDate newDateOfBirth =  new LocalDate(1975, Calendar.NOVEMBER, 11).getTime();
-//        greenReplacementCardObj.setDateOfBirth(newDateOfBirth);
-//        assertEquals(newDateOfBirth, greenReplacementCardObj.getDateOfBirth());
-//    }
+    @Test
+    public void setEmailTest(){
+        String newEmail = "leoDicap10@gmail.com";
+        greenReplacementCardObj.setEmail(newEmail);
+        assertEquals(newEmail, greenReplacementCardObj.getEmail());
+    }
+    @Test
+    public void setDateOfBirthTest(){
+        String newDateOfBirth = "2000-1-1";
+        greenReplacementCardObj.setDateOfBirth(newDateOfBirth);
+        assertEquals(newDateOfBirth, greenReplacementCardObj.getDateOfBirth());
+    }
     @Test
     public void setCountryOfBirthTest(){
         String newCountryOfBirth = "England";
         greenReplacementCardObj.setCountryOfBirth(newCountryOfBirth);
         assertEquals(newCountryOfBirth, greenReplacementCardObj.getCountryOfBirth());
     }
-//    @Test
-//    public void setHomeAddressTest(){
-//        org.openjfx.HomeAddress homeAddress = new org.openjfx.HomeAddress("123 Apple Street", "Fairfax", "VA", "12312");
-//        greenReplacementCardObj.setHomeAddress(homeAddress);
-//        assertEquals(homeAddress, greenReplacementCardObj.getHomeAddress());
-//
-//    }
+    @Test
+    public void setHomeAddressTest(){
+        HomeAddress homeAddress = new HomeAddress("123 Apple Street","301B", "Fairfax", "VA", "12312");
+        greenReplacementCardObj.setHomeAddress(homeAddress);
+        assertEquals(homeAddress, greenReplacementCardObj.getHomeAddress());
+
+    }
     @Test
     public void setReasonForReplacementTest(){
         String reasonForReplacement = "Card was stolen.";
@@ -120,7 +132,50 @@ class GreenReplacementCardBOTest {
         assertEquals(reasonForReplacement, greenReplacementCardObj.getReasonForReplacement());
     }
     @Test
-    public void isValidCountryTest(){
-        assertTrue(greenReplacementCardObj.isValidCountry(this.countryOfBirth));
+    public void dateOfBirthIsNullTest(){
+        // Test with null date of birth
+        greenReplacementCardObj.setDateOfBirth(null);
+        assertNull(greenReplacementCardObj.getDateOfBirth());
+    }
+    @Test
+    public void dateOfBirthIsEmpty(){
+        // Test with empty date of birth
+        greenReplacementCardObj.setDateOfBirth("");
+        assertEquals("", greenReplacementCardObj.getDateOfBirth());
+    }
+    @Test
+    public void emailIsNullTest(){
+        // Test with null email
+        greenReplacementCardObj.setEmail(null);
+        assertNull(greenReplacementCardObj.getEmail());
+    }
+    @Test
+    public void emailIsEmptyTest(){
+        // Test with empty email
+        greenReplacementCardObj.setEmail("");
+        assertEquals("", greenReplacementCardObj.getEmail());
+    }
+    @Test
+    public void homeAddressIsNullTest(){
+        // Test with null home address
+        greenReplacementCardObj.setHomeAddress(null);
+        assertNull(greenReplacementCardObj.getHomeAddress());
+
+        // Test with home address having null or empty values
+        HomeAddress invalidHomeAddress = new HomeAddress("", null, null, null, "");
+        greenReplacementCardObj.setHomeAddress(invalidHomeAddress);
+        assertEquals(invalidHomeAddress, greenReplacementCardObj.getHomeAddress());
+    }
+    @Test
+    public void reasonForReplacementIsNullTest(){
+        // Test with null reason for replacement
+        greenReplacementCardObj.setReasonForReplacement(null);
+        assertNull(greenReplacementCardObj.getReasonForReplacement());
+    }
+    @Test
+    public void reasonForReplacementIsEmptyTest(){
+        // Test with empty reason for replacement
+        greenReplacementCardObj.setReasonForReplacement("");
+        assertEquals("", greenReplacementCardObj.getReasonForReplacement());
     }
 }
