@@ -1,60 +1,52 @@
-//package org.openjfx;
-//
-//import org.junit.jupiter.api.AfterEach;
-//import org.junit.jupiter.api.BeforeEach;
-//import org.junit.jupiter.api.Test;
-//
-//import java.io.FileNotFoundException;
-//import java.io.FileOutputStream;
-//import java.io.PrintStream;
-//import java.util.LinkedList;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//class WorkFlowTest {
-//    private WorkFlow work = new WorkFlow();
-//
-//    @BeforeEach
-//    void setUp() {
-//        FormInfo form1 = new FormInfo();
-//        form1.id = 1;
-//        form1.step = "Approval";
-//        work.applicationQueue.add(form1);
-//    }
-//
-//    @AfterEach
-//    void tearDown(){
-//        assertNull(this.work);
-//    }
-//
-//
-//    @Test
-//    public void WorkFlowTester(){
-//        // Make sure the queues are instantiated
-//        assertTrue(work.applicationQueue instanceof LinkedList<?>);
-//    }
-//
-//    @Test
-//    public void updateTest(){
-//        FormInfo before = work.applicationQueue.get(0);
-//        work.update(0);
-//        FormInfo after = work.applicationQueue.get(1);
-//        assertNotEquals(before,after);
-//    }
-//
-//    @Test
-//    public void getIDTest(){
-//        FormInfo test = work.applicationQueue.get(0);
-//        assertEquals(work.getID("Approval"), test.id);
-//    }
-//
-//    @Test
-//    public void displayWorkFlowTest() throws FileNotFoundException {
-//        FileOutputStream newOut = new FileOutputStream("Out.txt");
-//        System.setOut(new PrintStream(newOut));
-//        work.displayWorkFlow();
-//        String correctResult = "";
-//        assertEquals(correctResult, newOut.toString());
-//    }
-//
-//}
+package org.openjfx;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class WorkFlowTest {
+
+    @Test
+    public void constructorTest(){
+        int expectedId = 5;
+        String expectedString = "Test";
+        var workflow = new WorkFlow(expectedId, expectedString);
+        assertEquals(workflow.getId(), expectedId);
+        assertEquals(workflow.getStep(), expectedString);
+    }
+
+    @Test
+    public void getIdTest(){
+        int expectedId = 5;
+        var workflow = new WorkFlow(expectedId, null);
+        assertEquals(workflow.getId(), expectedId);
+        assertNotEquals(expectedId-1, workflow.getId());
+    }
+
+    @Test
+    public void getStringTest(){
+        String expectedString = "Test";
+        var workflow = new WorkFlow(-1, expectedString);
+        assertEquals(workflow.getStep(), expectedString);
+        assertNotEquals(workflow.getId(), expectedString);
+    }
+
+    @Test
+    public void setIdTest(){
+        int original = 5;
+        int newSetValue = 8;
+        var workflow = new WorkFlow(original, null);
+        workflow.setId(newSetValue);
+        assertEquals(workflow.getId(), newSetValue);
+        assertNotEquals(original, workflow.getId());
+    }
+
+    @Test
+    public void setStringTest(){
+        String original = "Old";
+        String newSetValue = "New";
+        var workflow = new WorkFlow(-1, original);
+        workflow.setStep(newSetValue);
+        assertEquals(workflow.getStep(), newSetValue);
+        assertNotEquals(original, workflow.getStep());
+    }
+}
