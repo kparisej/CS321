@@ -79,11 +79,21 @@ public class Review extends Application {
         Button pull = new Button("Pull Next Form");
         Button btnSave = new Button("Save Changes");
         Button btnCancel = new Button("Cancel");
+        Button returnHome = new Button("Return to Menu");
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
-        hbBtn.getChildren().addAll(btnCancel, pull, btnSave);
+        hbBtn.getChildren().addAll(btnCancel, pull, btnSave, returnHome);
         btnSave.setDisable(true);
         grid.add(hbBtn, 1, 12);
+
+        // return home button
+        returnHome.setOnAction(e -> {
+            try {
+                launchHomeApp(primaryStage);
+            } catch (FileNotFoundException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         // Cancel button
         btnCancel.setOnAction(e -> {
@@ -99,11 +109,6 @@ public class Review extends Application {
             stateField.setText("");
             zipcodeField.setText("");
             reasonForReplacementArea.setText("");
-            try {
-                launchHomeApp(primaryStage);
-            } catch (FileNotFoundException ex) {
-                throw new RuntimeException(ex);
-            }
         });
 
         // button for pulling next review item from WF
@@ -190,6 +195,7 @@ public class Review extends Application {
         primaryStage.setTitle("Review Screen");
         primaryStage.show();
     }
+
     public void launchHomeApp(Stage primaryStage) throws FileNotFoundException {
         HomeApp homeApp = new HomeApp();
         homeApp.start(primaryStage);
